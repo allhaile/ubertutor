@@ -4,6 +4,7 @@ class OrgsController < ApplicationController
 
   def index
     @orgs = Org.all.reverse_order
+    @events = Event.all.reverse_order()
   end
 
   def show
