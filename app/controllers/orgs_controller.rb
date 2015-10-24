@@ -1,4 +1,5 @@
 class OrgsController < ApplicationController
+<<<<<<< HEAD
   layout 'orgs'
   def index
     @orgs = Org.all.reverse_order
@@ -24,5 +25,14 @@ class OrgsController < ApplicationController
   private
   def org_params
     params.require(:org).permit(:body, :name, :location)
+=======
+  def index
+  end
+
+  def show
+  end
+
+  def new
+>>>>>>> f6cf5f8505109e53389e9131e7b86cd780faadcd
   end
 end
