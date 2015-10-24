@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'orgs/index'
+
+  get 'orgs/show'
+
+  get 'orgs/new'
+
   devise_for :users
   get 'users/show'
   resources :users
