@@ -1,6 +1,7 @@
 class OrgsController < ApplicationController
-<<<<<<< HEAD
   layout 'orgs'
+  before_action :authenticate_user!
+
   def index
     @orgs = Org.all.reverse_order
   end
@@ -22,17 +23,15 @@ class OrgsController < ApplicationController
     end
   end
 
+  def destroy
+    @org = Org.find(params[:id])
+    @org.destory
+    redirect_to root_path
+  end
+
   private
   def org_params
     params.require(:org).permit(:body, :name, :location)
-=======
-  def index
-  end
 
-  def show
-  end
-
-  def new
->>>>>>> f6cf5f8505109e53389e9131e7b86cd780faadcd
   end
 end
