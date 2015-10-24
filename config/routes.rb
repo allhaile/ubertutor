@@ -4,10 +4,16 @@ Rails.application.routes.draw do
   get 'orgs/show'
 
   get 'orgs/new'
-  
+ 
+
+  post 'orgs/create'
+
   devise_for :users
 
+
   resources :users
+  resources :event
+
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

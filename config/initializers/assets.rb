@@ -21,6 +21,7 @@ Rails.application.config.assets.precompile += %w( jquery.dropotron.min.js )
 Rails.application.config.assets.precompile += %w( skel.min.js )
 Rails.application.config.assets.precompile += %w( skel-layers.min.js )
 Rails.application.config.assets.precompile += %w( jquery.min.js )
+Rails.application.config.assets.precompile += %w( style.css )
 
 # Rails.application.config.assets.paths << Emoji.images_path
 
