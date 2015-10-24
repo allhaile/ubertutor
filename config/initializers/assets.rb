@@ -8,7 +8,7 @@ Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( bootstrap.css )
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
 Rails.application.config.assets.precompile += %w( custom.css )
-
+Rails.application.config.assets.precompile += %w( style.css )
 
 # Rails.application.config.assets.paths << Emoji.images_path
 

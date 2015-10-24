@@ -1,0 +1,8 @@
+<%= form_for :event do |f| %>
+	Title: <%= f.text_field :title %>
+	Location: <%= f.text_field :location %>
+	Date: <%= f.text_field :date %>
+	Subject: <%= f.text_field :subject %>
+	Description: <%= f.text_field :description %>
+	<%= f.submit %>
+<% end %>
