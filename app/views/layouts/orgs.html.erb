@@ -2,6 +2,23 @@
 <html>
 <head>
   <title>Ubertutor</title>
+  <%= stylesheet_link_tag    'skel', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'style' %>
+  <%= stylesheet_link_tag    'style-mobile', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'style-narrow', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'style-narrower', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'style-normal', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'style-wide', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'init', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'skel.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'skel-layers.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.dropotron.min', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+
   <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,4 +27,5 @@
 <%= yield %>
 
 </body>
+</html>
 </html>
