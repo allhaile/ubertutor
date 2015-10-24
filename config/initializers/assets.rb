@@ -16,8 +16,14 @@ Rails.application.config.assets.precompile += %w( style-narrower.css )
 Rails.application.config.assets.precompile += %w( style-normal.css )
 Rails.application.config.assets.precompile += %w( style-wide.css )
 
+Rails.application.config.assets.precompile += %w( init.js )
+Rails.application.config.assets.precompile += %w( jquery.dropotron.min.js )
+Rails.application.config.assets.precompile += %w( skel.min.js )
+Rails.application.config.assets.precompile += %w( skel-layers.min.js )
+Rails.application.config.assets.precompile += %w( jquery.min.js )
+
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+# application.js, application.css.scss, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )

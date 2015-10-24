@@ -1,5 +1,5 @@
 class OrgsController < ApplicationController
-  before_action :authenticate_user!
+  layout 'orgs'
   def index
     @orgs = Org.all.reverse_order
   end
@@ -15,7 +15,7 @@ class OrgsController < ApplicationController
   def create
     @org = Org.new(org_params)
     if @org.save
-      redirect_to orgs_index_path, notice: "New video successfully added"
+      redirect_to orgs_index_path, notice: "New post successfully added"
     else
       render 'new'
     end
