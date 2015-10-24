@@ -1,29 +1,33 @@
-<h2>Sign up</h2>
+<div class="container-signup">
+    <h2 align="middle">Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+            <div class="field">
+              <%= f.label "Name", class: "signup-name-label" %><br />
+              <%= f.text_field :name, autofocus: true, class: "signup-name-field" %>
+            </div>
+          <div class="field">
+            <%= f.label :email, class: "signup-email-label"%><br />
+            <%= f.email_field :email, autofocus: true, class: "signup-email-field" %>
+          </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+          <div class="field">
+            <%= f.label :password, class: "signup-password" %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "signup-password-field"%>
+          </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+          <div class="field">
+            <%= f.label :password_confirmation, class:"signup-password-confimation"%><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "signup-password-confirmation-field" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+          <div class="actions">
+            <%= f.submit "Sign up" %>
+          </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
+</div>

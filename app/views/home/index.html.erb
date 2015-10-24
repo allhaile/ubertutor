@@ -1,20 +1,55 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Solid State by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+ <!-- Navigation -->
+    <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="font-size:22px;" href="#">
+                	UberTutor
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><%=link_to "Sign Up", new_user_registration_path, class: "btn btn-lg"%></li>
+                    <% if !user_signed_in? %>
+                        <li> <%=link_to "Log In", new_user_session_path, class: "btn btn-lg" %></li>
+                    <% else %>
+                      <li> <%= link_to "LOG OUT", destroy_user_session_path, class: "btn btn-lg", :method => :delete %></li>
+                    <% end %>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+
+	<!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Make an Impact</h1>
+                <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
+                    <%=link_to "Start Today", new_user_registration_path, class: "btn btn-primary btn-lg"%>
+            </div>
+        </div>
+    </header>
+
+	<!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                	<span class="glyphicon glyphicon-apple" style="font-size: 60px"></span>
+                    <h2 class="section-heading">Completely synergize resource taxing relationships</h2>
+                    <p class="text-light">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -183,3 +218,4 @@
 
 	</body>
 </html>
+
