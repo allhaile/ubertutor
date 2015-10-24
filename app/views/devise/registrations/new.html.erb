@@ -2,7 +2,8 @@
     <h2 align="middle">Sign up</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
-            <div class="field">
+            
+        <div class="field">
               <%= f.label "Name", class: "signup-name-label" %><br />
               <%= f.text_field :name, autofocus: true, class: "signup-name-field" %>
             </div>
@@ -22,7 +23,21 @@
           <div class="field">
             <%= f.label :password_confirmation, class:"signup-password-confimation"%><br />
             <%= f.password_field :password_confirmation, autocomplete: "off", class: "signup-password-confirmation-field" %>
+
+         <div class="field">
+              <%= f.label :name, "Phone Number", class: "signup-name-label" %><br />
+              <%= f.text_field :name, class: "signup-name-field" %>
+            </div>
+
           </div>
+          <div class="field">
+              <%= f.label :name, "School Admin", class: "signup-name-label" %><br />
+              <%= f.radio_button :name, class: "signup-name-field" %>
+            </div>
+        <div class="field">
+              <%= f.label "Parents", class: "signup-name-label" %><br />
+              <%= f.radio_button :name, class: "signup-name-field" %>
+            </div>
 
           <div class="actions">
             <%= f.submit "Sign up" %>
